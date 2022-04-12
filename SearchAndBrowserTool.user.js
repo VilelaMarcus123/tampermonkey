@@ -97,7 +97,7 @@ var getSiteKeyParam = () => {
     // Your code here...
 
     console.log("Product Ids:");
-    console.log(JSON.parse(document.getElementById('__NEXT_DATA__').innerHTML).props.pageProps.plpData.products.map(({id}) => id).toString());
+    JSON.parse(document.getElementById('__NEXT_DATA__').innerHTML).props.pageProps.plpData.products.forEach(({id}) => console.log(id));
     console.log("Constructor URL:");
     var constructorUrl = getConstructorUrl()
     console.log(constructorUrl);
